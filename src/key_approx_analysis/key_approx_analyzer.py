@@ -392,7 +392,7 @@ def back_track(current_contract, func_name, marked_nodes, in_nodes, slither):
                         right_type = str(type(right))
                     except:
                         new_details_added = True
-                        map_keys_details[key_idx].append([key_val, 'tou', 'regular'])
+                        map_keys_details[key_idx].append([map_key[0], 'tou', 'regular'])
                         break
                     if 'identifier' in right_type:
                         new_var = str(right.value)
