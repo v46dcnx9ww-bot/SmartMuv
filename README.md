@@ -1,8 +1,8 @@
 # SmartMuv
-[SmartMuv](https://www.smartmuv.app) is a smart contract analysis and data extraction tool in Python 3. SmartMuv can extract the complete state/data of the smart contract and enables users to upgrade or migrate their smart contracts along with the data across any EVM-compatible blockchain. SmartMuv can also be used for smart contract state tracking or retrieving smart contract data (i.e. holders list or entries list of any data type like mapping, arrays, etc.) until a specific block number.
+[SmartMuv](https://www.smartmuv.app) is a smart contract analysis and data extraction tool in Python 3. SmartMuv can extract the complete state/data of the smart contract and enables users to upgrade and migrate smart contracts without losing data.
 
 
-As Solidity does not keep track of the keys of mapping variables, SmartMuv uses static time source code analysis techniques to perform key approximation analysis on mapping variables. It analyzes the complete layout of a smart contract and can extract not only regular variables but also complex variables (i.e. mappings and multi-dimensional arrays) and user-defined variables.
+As Solidity does not keep track of the keys of mapping variables, SmartMuv uses static time source code analysis techniques to perform key approximation analysis on mapping variables. It analyzes the bytecode to extract the current state/data from a smart contract and represents it in a JSON format.
 
 ## System Requirements
 
@@ -35,7 +35,7 @@ python3 install_compilers.py
 
 ## Configuration
 
-SmartMuv uses EVM-compatible Blockchain `RPC` URL for state extraction, and block explorer `APIs` i.e. EtherScan, PolygonScan, BscScan, etc., to get smart contract transactions. API keys and URLs for RPC and Block explorers must be added to the `config.ini` file for the tool to work properly.
+SmartMuv uses EVM-compatible Blockchain `RPC` URL for state extraction, and block explorer `APIs` i.e. EtherScan, PolygonScan, BscScan, etc., to get smart contract transactions. API keys and URLs can be configured in the `config.ini` file.
 
 ## Running Script
 
